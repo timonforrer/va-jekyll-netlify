@@ -1,0 +1,29 @@
+---
+title: Blog
+permalink: "/blog/index.html"
+layout: default
+background_image: "/uploads/turntable.jpg"
+background_image_caption: ''
+---
+
+{% assign sorted_posts = site.posts | sort: "date" | reverse %}
+{% for post in sorted_posts %}
+<div class="post-overview-wrapper material-shadow-1 material-corner">
+    <a href="{{ post.url }}" class="col-lg-4 col-md-5 col-sm-5 col-xs-12 post-overview-image" style="background-image:url({{ post.background_image }})">
+    </a>
+    <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12 post-overview">
+        <a href="{{ post.url }}">
+            <h2>
+            {{ post.title }}
+            </h2>
+        </a>
+        <span>
+            {{ post.date | date: "%d. %B %Y" | replace:"January","Januar" | replace:"Februar","February" | replace:"March","März" | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"December","Dezember" }}
+        </span>
+        <p>
+            {{ post.description }}
+        </p>
+        <a href="{{ post.url }}" class="btn btn-default pull-right material-ease">Mehr</a>
+    </div>
+</div>
+{% endfor %}

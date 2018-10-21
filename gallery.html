@@ -1,0 +1,15 @@
+---
+title: Galerie
+permalink: "/gallery/index.html"
+layout: default
+background_image: "/uploads/dorffest_menziken_toni_timon.jpg"
+background_image_caption: Vorbereitungen für den Auftritt im Salzhaus in Brugg
+---
+
+{% assign sorted_images = site.gallery | sort: "position" | reverse %}
+{% for img in sorted_images %}
+<a class="swipebox col-lg-4 col-md-4 col-sm-6 col-xs-12" href="/uploads/{{ img.image_path }}" title="{{ img.caption }}">
+    <div class="child" style="background-image: url(/uploads/{{ img.thumbnail_path }})" title="{{ img.title }}">
+    </div>
+</a>
+{% endfor %}

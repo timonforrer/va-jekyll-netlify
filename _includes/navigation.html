@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <!--
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                      
+            </button>
+            -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <i class="material-icons">menu</i>                   
+            </button>
+            <a class="navbar-brand" {% if page.url == "/" %} href="#" {% else %} href="/" {% endif %}>Voltage Arc</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li {% if page.url == "/" %}class="active"{% endif %}><a href="/">Start</a></li>
+                <li {% if page.url == "/events/index.html" %}class="active"{% endif %}><a href="/events/">Veranstaltungen</a></li>
+                <li {% if page.url == "/gallery/index.html" %}class="active"{% endif %}><a href="/gallery/">Galerie</a></li>
+                <li {% if page.url == "/blog/index.html" %}class="active"{% endif %}><a href="/blog/">Blog</a></li>
+                <li {% if page.url == "/engage/index.html" %}class="active"{% endif %}><a href="/engage/">Buchen</a></li>
+                <li {% if page.url == "/contact/index.html" %}class="active"{% endif %}><a href="/contact/">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

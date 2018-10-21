@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="fb-like pull-right" data-href="http://www.voltagearc.com{{ page.url }}" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+
+<p class="post-date">{{ page.date | date: "%d. %B %Y" | replace:"January","Januar" | replace:"Februar","February" | replace:"March","März" | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"December","Dezember" }}</p>
+
+<p class="post-author">{{ page.author }}</p>
+
+<div class="event-wrapper" itemscope itemtype="http://schema.org/Event">
+    <p itemprop="name">
+        Veranstaltung: <strong>{{ page.title }}</strong>
+    </p>
+    
+    <div itemprop="startDate" content="{{ page.start_date | date: "%Y-%m-%dT%TZ" }}">
+        <p>Datum: <strong>{{ page.start_date | date: "%d. %B %Y" | replace:"January","Januar" | replace:"Februar","February" | replace:"March","März" | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"December","Dezember" }}</strong></p>
+        <p>Türöffnung: <strong>{{ page.start_date | date: "%R" }}</strong></p>
+    </div>
+    <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+        <p>Lokal: {% if page.link == '' %}<strong>{{ page.location }}</strong>{% else %}<a itemprop="url" href="{{ page.link }}"><strong>{{ page.location }}</strong></a>{% endif %}</p>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <p itemprop="streetAddress">Adresse: <a href="http://maps.google.com/?q={{ page.address | replace:" ","+" | replace:",","" }}" target="_blank"><strong>{{ page.address }}</strong></a></p>
+        </div>
+    </div>
+</div>
+
+<div class="post-text col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    {{ content }}
+</div>
+
+<div style="max-width:100%;" class="fb-comments" data-href="https://www.voltagearc.com{{ page.url }}" data-numposts="5"></div>

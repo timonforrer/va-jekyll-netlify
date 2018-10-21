@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /fonts/
+Disallow: /js/
+Disallow: /uploads/Put_Up_Your_Head_(First_Demo).mp3
+Disallow: /uploads/voltage_arc_background_video.mp4
+Disallow: /uploads/logo.png
+Disallow: /uploads/turntable.jpg
+Disallow: /uploads/loader.gif
+Disallow: /uploads/icon192x192.png
+Disallow: /uploads/drums.jpg
+Disallow: /uploads/concert.jpg
+Disallow: /uploads/icons.png
+Disallow: /uploads/icons.svg
+Disallow: /uploads/willkommen-auf-voltage-arc.jpg

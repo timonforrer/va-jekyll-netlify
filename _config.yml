@@ -1,0 +1,49 @@
+---
+title: Va
+timezone: UTC
+collections:
+  gallery:
+    title: Galerie
+    output: false
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+  events:
+    title: Veranstaltungen
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: gallery
+  values:
+    thumbnail_path: ''
+    image_path: ''
+    caption: ''
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    description: ''
+    author: ''
+    video: ''
+    song: ''
+    background_image: ''
+    image_caption: ''
+- scope:
+    path: ''
+    type: events
+  values:
+    layout: event
+    state: ''
+    author: ''
+    background_image: "/uploads/concert.jpg"
+    location: ''
+    address: ''
+    start_date: ''
+    link: ''
+jekyll-minifier:
+  exclude: engage/index.php

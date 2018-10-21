@@ -1,0 +1,151 @@
+---
+title: Start
+layout: master
+background_image: "/uploads/thumbnail.jpg"
+image_caption: Merlin während der Bandprobe
+---
+
+<div class="landing-page">
+    <h1>Voltage Arc</h1>
+    <div class="btn-outline"><a href="#scroll" class="scroll">Mehr Erfahren</a></div>
+    <i class="material-icons animated">keyboard_arrow_down</i>
+    <video poster="{{ page.background_image }}" playsinline autoplay muted loop id="bgvid" title="{{ page.image_caption }}">
+        {% if jekyll.environment == 'production' %}
+        <source src="/uploads/voltage_arc_background_video.mp4" type="video/mp4">
+        {% endif %}
+    </video>
+</div>
+
+{% include fab.html %}
+
+<div class="container" id="scroll">
+    <div class="material-simple-card material-simple-card--margin" style="margin-top: 74px">
+        <h2 class="material-simple-card__title">Music Is Our Live</h2>
+        <p>Entnommen von unserer ersten EP <a href="https://break-free.voltagearc.com">«Break Free»</a></p>
+        <div class="inline-video col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class=" embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Zw4ZssHgd1w" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="material-simple-card material-simple-card--margin">
+        <h2 class="material-simple-card__title">Energie und moderne Beats – das sind Voltage Arc</h2>
+        <p>
+            Voltage Arc kombinieren Rock/Metal mit modernen Rhythmen und erzeugen hierdurch kraftvolle Songs, die perfekt in die Neuzeit passen. Neben einigen Coverstücken füllen Hauptsächlich Eigenkompositionen unsere Set-list. Dank eines vielseitigen Repertoires, das von Pop-Stücken bis hin zu härtesten Metal Sounds reicht, halten wir zu jedem Anlass die passenden Songs bereit.
+        </p>
+    </div>
+    <h1 class="padding-top-plus">Die Musiker</h1>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="about-card material-shadow-1">
+                <img class="img-circle center-block" src="/uploads/toni.jpg" alt="Toni Hörner">
+                <h2>Toni</h2>
+                <p>Der Frontmann ist einerseits begeisterter Sänger, engagiert sich andererseits auch auf instrumenteller Ebene. Neben dem urchigen "Schwyzerörgeli" beherrscht Toni einige Grooves auf dem Schlagzeug und spielt zeitweise auch einfache Melodien auf dem Piano.</p>
+                <div class="align-bottom">
+                    <h3>Kontakt</h3>
+                    <a href="https://www.facebook.com/toni.hxdlol.7" class="btn-sm btn-primary material-ease" role="button" target="_blank">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="about-card material-shadow-1">
+                <img class="img-circle center-block" src="/uploads/merlin.jpg" alt="Merlin Eichenberger">
+                <h2>Merlin</h2>
+                <p>Sein Gitarrenspiel charakterisiert unseren Stil massgebend – viele Seiner Ideen liefern die Grundlage unserer Songs. Merlins Repertoire reicht von härtesten Rock-Riffs bis hin zu ruhigen Jazz-Harmonies, was für Abwechslung beim Komponieren sorgt.</p>
+                <div class="align-bottom">
+                    <h3>Kontakt</h3>
+                    <a href="https://www.facebook.com/merlin.eichenberger" class="btn-sm btn-primary material-ease" role="button" target="_blank">Facebook</a>
+                    <a href="mailto:merlin.eichenberger@stud.altekanti.ch" class="btn-sm btn-primary material-ease" role="button">Mail</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="about-card material-shadow-1">
+                <img class="img-circle center-block" src="/uploads/julian.jpg" alt="Julian Stein">
+                <h2>Julian</h2>
+                <p>Mit tighten Bassläufen sorgt Julian für eine solide Basis, denn es gilt: egal wie komplex und vielschichtig ein Song ist, schlussendlich entscheidet das Timing. Durch koordiniertes Bassspiel baut er somit das Grundgerüst eines jeden Voltage Arc Songs.</p>
+                <div class="align-bottom">
+                    <h3>Kontakt</h3>
+                    <a href="https://www.facebook.com/julian.stein.509" class="btn-sm btn-primary material-ease" role="button" target="_blank">Facebook</a>
+                    <a href="mailto:julianstein4@gmail.com" class="btn-sm btn-primary material-ease" role="button">Mail</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-md-offset-4 col-lg-offset-0">
+            <div class="about-card material-shadow-1">
+                <img class="img-circle center-block" src="/uploads/timon.jpg" alt="Timon Forrer">
+                <h2>Timon</h2>
+                <p>Das neueste Mitglied sorgte mit modernen Drum-Beats für eine Anpassung unseres Stils. Die Songs behalten ihre gewohnte Energie, haben jedoch ein zeitgemässeres Feeling. Durch diese Veränderung möchten wir noch ein breiteres Zielpublikum ansprechen.</p>
+                <div class="align-bottom">
+                    <h3>Kontakt</h3>
+                    <a href="https://www.facebook.com/timon.forrer.1" class="btn-sm btn-primary material-ease" role="button" target="_blank">Facebook</a>
+                    <a href="mailto:timon.forrer@gmail.com" class="btn-sm btn-primary material-ease" role="button">Mail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="padding-top-plus">Übersicht</h1>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="material-card" style="background-image:url(/uploads/concert_thumbnail.jpg)">
+                <a href="/events/index.html"></a>
+                <div class="bottom-container">
+                    <div class="text-container">
+                        <h2>Veranstaltungen</h2>
+                        <p>Alle Infos zu unseren Events</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="/events/index.html">Events anzeigen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="material-card" style="background-image:url(/uploads/concert_salzhaus_brugg_thumbnail.jpg)">
+                <a href="/gallery/index.html"></a>
+                <div class="bottom-container">
+                    <div class="text-container">
+                        <h2>Galerie</h2>
+                        <p>Alle Bilder von Voltage Arc</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="/gallery/index.html">Bilder anzeigen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="material-card" style="background-image:url(/uploads/turntable_thumbnail.jpg)">
+                <a href="/blog/index.html"></a>
+                <div class="bottom-container">
+                    <div class="text-container">
+                        <h2>Blog</h2>
+                        <p>Alle Stories über uns</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="/blog/index.html">Posts anzeigen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="material-card" style="background-image:url(/uploads/drums_thumbnail.jpg)">
+                <a href="/engage/index.php"></a>
+                <div class="bottom-container">
+                    <div class="text-container">
+                        <h2>Buchen</h2>
+                        <p>Buche Voltage Arc für deinen Event</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="/engage/index.php">Jetzt buchen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="padding-top-plus">Voltage Arc auf Facebook</h1>
+    <div class="fb-page-container material-shadow-1 material-corner">
+        <div class="fb-page" data-href="https://www.facebook.com/Voltage-Arc-1526604557555919/" data-tabs="timeline" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Voltage-Arc-1526604557555919/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Voltage-Arc-1526604557555919/">Voltage Arc</a></blockquote></div>
+    </div>
+</div>

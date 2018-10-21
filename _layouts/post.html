@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="fb-like pull-right" data-href="http://www.voltagearc.com{{ page.url }}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+
+<p class="post-date">{{ page.date | date: "%d. %B %Y" | replace:"January","Januar" | replace:"Februar","February" | replace:"March","März" | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"December","Dezember" }}</p>
+
+<p class="post-author">{{ page.author }}</p>
+
+{% if page.video != '' %}
+<div class="inline-video col-lg-8 col-md-10 col-sm-12 col-xs-12">
+    <div class=" embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+{% endif %}
+
+<div class="post-text col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    {{ content }}
+</div>
+
+{% if page.song != '' %}
+<audio controls>
+  <source src="{{ page.song }}" type="audio/mpeg">
+</audio>
+{% endif %}
+
+<div class="facebook-embed">
+    <div style="max-width:100%;" class="fb-comments" data-href="https://www.voltagearc.com{{ page.url }}" data-numposts="5"></div>
+</div>

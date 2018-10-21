@@ -1,0 +1,121 @@
+---
+title: Veranstaltungen
+permalink: "/events/index.html"
+layout: default
+background_image: "/uploads/concert.jpg"
+background_image_caption: ''
+---
+
+<h2 class="events-site-header">Bevorstehend</h2>
+
+<div class="seperator"></div>
+
+{% assign events = site.events | where:'state','upcoming' %}
+{% if events != empty %}
+    <!-- true -->
+    {% assign sorted_events = events | sort:'start_date' %}
+    {% for event in sorted_events %}
+        <div class="event-container">
+            <h3>
+                <a href="{{ event.url }}">
+                    {{ event.start_date | date:  "%d. %B %Y" | replace:"January","Jan." | replace:"Februar","Feb." | replace:"March","März" | replace:"April","Apr." | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"August","Aug." | replace:"September","Sept." | replace:"October","Okt." | replace:"November","Nov." | replace:"December","Dez." }}
+                </a>
+            </h3>
+
+            <p>Live at {{ event.location }}</p>
+
+            <p class="opening">Türöffnung: {{ event.start_date | date: "%R" }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+<!-- false -->
+<h4>Keine bevorstehenden Events</h4>
+{% endif %}
+
+
+<!-- {% assign events = site.events | where:'state','upcoming' %}
+{% assign sorted_events = events | sort: 'start_date' %}
+{% if sorted_events == empty %}
+<h4>Keine bevorstehenden Events</h4>
+{% else %}
+{% for event in sorted_events %}
+
+<div class="event-container">
+    <h3>
+        <a href="{{ event.url }}">
+            {{ event.start_date | date:  "%d. %B %Y" | replace:"January","Jan." | replace:"Februar","Feb." | replace:"March","März" | replace:"April","Apr." | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"August","Aug." | replace:"September","Sept." | replace:"October","Okt." | replace:"November","Nov." | replace:"December","Dez." }}
+        </a>
+    </h3>
+
+    <p>Live at {{ event.location }}</p>
+
+    <p class="opening">Türöffnung: {{ event.start_date | date: "%R" }}</p>
+</div>
+
+{% endfor %}
+
+{% endif %} -->
+
+<h2 class="events-site-header">Vergangen</h2>
+
+<div class="seperator"></div>
+{% assign former_events = site.events | where:'state','former' %}
+{% if former_events != empty %}
+    <!-- true -->
+    {% assign sorted_former_events = former_events | sort:'start_date' | reverse %}
+    {% for event in sorted_former_events %}
+    <div class="event-container">
+        <h3>
+            <a href="{{ event.url }}">
+                {{ event.start_date | date:  "%d. %B %Y" | replace:"January","Jan." | replace:"Februar","Feb." | replace:"March","März" | replace:"April","Apr." | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"August","Aug." | replace:"September","Sept." | replace:"October","Okt." | replace:"November","Nov." | replace:"December","Dez." }}
+            </a>
+        </h3>
+
+        <p>Live at {{ event.location }}</p>
+
+        <p class="opening">Türöffnung: {{ event.start_date | date: "%R" }}</p>
+    </div>
+
+    {% endfor %}
+{% else %}
+<!-- false -->
+<h4>Keine vergangenen Events</h4>
+{% endif %}
+
+
+<!-- {% assign events = site.events | where:'state','former' %}
+{% assign sorted_events = events | sort: 'start_date' | reverse %}
+{% for event in sorted_events %}
+
+<div class="event-container">
+    <h3>
+        <a href="{{ event.url }}">
+            {{ event.start_date | date:  "%d. %B %Y" | replace:"January","Jan." | replace:"Februar","Feb." | replace:"March","März" | replace:"April","Apr." | replace:"May","Mai" | replace:"June","Juni" | replace:"July","Juli" | replace:"August","Aug." | replace:"September","Sept." | replace:"October","Okt." | replace:"November","Nov." | replace:"December","Dez." }}
+        </a>
+    </h3>
+
+    <p>Live at {{ event.location }}</p>
+
+    <p class="opening">Türöffnung: {{ event.start_date | date: "%R" }}</p>
+</div>
+
+{% endfor %} -->
+
+<!--
+<div class="border-wrapper">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="tab active" role="presentation"><a href="#upcoming" role="tab" data-toggle="tab">Bevorstehend</a></li>
+        <li class="tab" role="presentation"><a href="#former" role="tab" data-toggle="tab">Vergangen</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="upcoming">
+
+        </div>
+        
+        <div role="tabpanel" class="tab-pane" id="former">
+            
+        </div>
+    </div>
+</div>
+-->
