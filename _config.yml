@@ -47,3 +47,4 @@ defaults:
     link: ''
 jekyll-minifier:
   exclude: engage/index.php
+include: [_redirects]
