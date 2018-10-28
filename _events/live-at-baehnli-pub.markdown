@@ -1,7 +1,7 @@
 ---
 title: Pub Konzert
 date: 2018-10-08 17:31:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: Bähnli Pub
 address: Aarauerstrasse 32, 5712 Beinwil am See
