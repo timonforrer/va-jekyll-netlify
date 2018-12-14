@@ -19,7 +19,7 @@ Ausserdem: die Tickets werden direkt über uns vertrieben. Unsere Gage ist abhä
 
 ## Weitere Infos
 * Eintritt: CHF 15
-* Facebook-Event: [https://www.facebook.com/events/1566175213525859/]()
+* [Facebook-Event](https://www.facebook.com/events/1566175213525859/)
 
 Wenn du dir das Konzert zu gemüte führen willst, kannst du das Ticket direkt bei uns beantragen:
 * Mail: [info@voltagearc.com](mailto:info@voltagearc.ch?subject=Tickets SPH-Bandcontest Vorrunde am 26.01.2018)
