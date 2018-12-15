@@ -13,9 +13,9 @@ Es geht auf in die Vorrunde des SPH-Bandontests! Dort treten wir gegen [Creeper]
 
 Nebst einer Jury bestimmt das Publikum, wer in die nächste Runde kommt. Darum sind wir auf dich angewiesen. Je mehr Fans uns unterstützen, desto grösser ist unsere Chance, eine Runde weiter zu kommen.
 
-Jede Band erhält einen 30-Minuten-Slot, in welcher sie ihr Können unter Beweis stellen können. Du kannst dich von unserer Seite auf ein abwechslungsreiches und kurzweiliges Programm freuen.
+Jede Band erhält einen 30-Minuten-Slot, in welcher sie ihr Können unter Beweis stellen darf. Du kannst dich von unserer Seite auf ein abwechslungsreiches und kurzweiliges Programm freuen.
 
-Ausserdem: die Tickets werden direkt über uns vertrieben. Unsere Gage ist abhängig davon, wie viele Tickets verkauft wurden. Das heisst, mit einem Ticket unterstützt du uns nicht nur hinsichtlich Qualifizierung für die nächste Rund, sondern auch finanziell.
+Ausserdem: die Tickets werden direkt über uns vertrieben. Unsere Gage ist abhängig davon, wie viele Tickets verkauft wurden. Das heisst, mit einem Ticket unterstützt du uns nicht nur hinsichtlich Qualifizierung für die nächste Runde, sondern auch finanziell.
 
 ## Weitere Infos
 * Eintritt: CHF 15
@@ -26,4 +26,4 @@ Wenn du dir das Konzert zu gemüte führen willst, kannst du das Ticket direkt b
 * Facebook-Messenger: [m.me/VoltageArc](https://m.me/VoltageArc)
 
 
-![sph-bandcontest-sedel.jpg](/uploads/sph-bandcontest-sedel.jpg){: .img-responsive .material-shadow-1 .material-corner }
+![sph-bandcontest-sedel.jpg](/uploads/sph-bandcontest-sedel.jpg){: .img-responsive .material-shadow-1 .material-corner .has-margin }
