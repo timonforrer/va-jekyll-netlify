@@ -324,7 +324,6 @@ nav li a {
     background-color: #ffffff;
     min-height: 400px;
     min-height: 80vh;
-    padding-bottom: 15px;
 }
 
 
@@ -611,7 +610,8 @@ audio {
     }
     .material-section {
         margin-top: 400px;
-        margin-top: 75vh
+        margin-top: 75vh;
+        padding: 16px;
     }
     .material-card>.bottom-container {
         height: 125px;
@@ -701,7 +701,8 @@ audio {
     }
     .material-section {
         margin-top: 350px;
-        margin-top: 60vh
+        margin-top: 60vh;
+        padding: 4em;
     }
     .material-card:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -896,6 +897,10 @@ audio {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.15);
+}
+
+img.has-margin {
+    margin: 2em 0;
 }
 
 
