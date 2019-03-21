@@ -1,7 +1,7 @@
 ---
 title: SPH Bandcontest
 date: 2018-12-14 11:15:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: Sedel
 address: Sedelhof 2, 6020 Emmenbrücke
