@@ -7,7 +7,7 @@ location: Sedel
 address: Sedelhof 2, 6020 Emmenbrücke
 start_date: 2019-04-27 20:00:00 Z
 link: 'https://www.sph-bandcontest.ch/shows/details/2413'
-background_image: '/uploads/voltage-arccle-live-at-sedel.jpg'
+background_image: '/uploads/voltage-arc-live-at-sedel.jpg'
 ---
 
 ## Willkommen im Stadtfinale!
