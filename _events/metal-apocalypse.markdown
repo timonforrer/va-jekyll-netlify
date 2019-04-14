@@ -1,7 +1,7 @@
 ---
 title: Metal Apocalypse Vol. XXIX
 date: 2019-04-04 21:17:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: Planet5
 address: Sihlquai 240, 8005 Zürich
