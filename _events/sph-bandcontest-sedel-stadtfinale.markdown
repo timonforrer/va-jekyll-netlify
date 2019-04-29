@@ -1,7 +1,7 @@
 ---
 title: SPH Bandcontest Stadtfinale
 date: 2019-03-21 17:35:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: Sedel
 address: Sedelhof 2, 6020 Emmenbrücke
