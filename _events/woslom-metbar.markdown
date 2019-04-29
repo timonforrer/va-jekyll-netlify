@@ -18,7 +18,7 @@ Spontan hat es uns einen Gig in der Met-Bar Lenzburg reingeschneit. Zusammen mit
 [Woslom](http://woslom.net/site/english-news/) aus Brasilien und
 [TurboWarrior of Steel](https://vi.be/turbowarriorofsteel) werden wir ordentlich einheizen!
 
-Wir freuen uns über alle spontan-entschiedenen, die uns am Gig supporten möchten!
+Wir freuen uns auf alle spontan-entschiedenen, die uns am Gig supporten möchten!
 
 ### Tickets
 
