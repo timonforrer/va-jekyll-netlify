@@ -36,7 +36,7 @@ Der Eintritt kostet 15 Franken und Tickets gibt es auf [eventfrog.ch](https://ev
 
 <div class="inline-video col-lg-8 col-md-10 col-sm-12 col-xs-12">
     <div class=" embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/1qcVp7VX6L8" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1qcVp7VX6L8" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -48,6 +48,6 @@ Hardcore … wie die Beastie Boys auf Steroiden!</p>
 
 <div class="inline-video col-lg-8 col-md-10 col-sm-12 col-xs-12">
     <div class=" embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/fOfPZaFu6RM" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fOfPZaFu6RM" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
