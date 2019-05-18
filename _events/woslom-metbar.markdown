@@ -1,7 +1,7 @@
 ---
 title: Woslom
 date: 2019-04-29 16:00:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: Met Bar
 address: Niederlenzerstrasse 29, 5600 Lenzburg
