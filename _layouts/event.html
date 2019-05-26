@@ -20,8 +20,11 @@ layout: default
     <div itemprop="location" itemscope itemtype="http://schema.org/Place">
         <p>Lokal: {% if page.link == '' %}<strong>{{ page.location }}</strong>{% else %}<a itemprop="url" href="{{ page.link }}"><strong>{{ page.location }}</strong></a>{% endif %}</p>
         <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <p itemprop="streetAddress">Adresse: <a href="http://maps.google.com/?q={{ page.address | replace:" ","+" | replace:",","" }}" target="_blank"><strong>{{ page.address }}</strong></a></p>
+            <p itemprop="streetAddress">Adresse: <a href="http://maps.google.com/?q={{ page.address | replace:' ','+' | replace:',','' }}" target="_blank"><strong>{{ page.address }}</strong></a></p>
         </div>
+        {% if page.price %}
+        <p>Vorkasse: CHF {{ page.price }}</p>
+        {% endif %}
     </div>
 </div>
 
