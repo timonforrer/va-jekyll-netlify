@@ -6,7 +6,7 @@ author: Voltage Arc
 location: TaB
 address: Tunaustrasse 5, 5734 Reinach AG
 start_date: 2019-06-28 20:00:00 Z
-link: 'http://beta.tab.ch'
+link: 'http://beta.tab.ch/saal_prog.php?activate=0'
 price: 10
 ---
 
