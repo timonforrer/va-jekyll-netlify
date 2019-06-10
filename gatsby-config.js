@@ -1,25 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Voltage Arc`,
+    description: `Wilder, kompromissloser Hardrock. Das ist Voltage Arc. Junge Hardrock und Metal Band aus Beinwil am See, Aargau`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-prismic-graphql',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        repositoryName: 'voltagearc', // (required)
+        path: '/preview', // (optional, default: /preview)
+        previews: true, // (optional, default: false)
+        pages: [{ // (optional)
+          type: 'Post',         // TypeName from prismic
+          match: '/news/:uid',  // Pages will be generated under this pattern (optional)
+          path: '/news',        // Placeholder page for unpublished documents
+          component: require.resolve('./src/templates/post.jsx'),
+        }],
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `voltagearc`,
+        short_name: `VA`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
