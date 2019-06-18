@@ -5,7 +5,7 @@ state: upcoming
 author: Voltage Arc
 location: Gemeindesaal Menziken
 address: Hauptstrasse 42, 5737 Menziken AG
-start_date: 2019-06-21 20:30:00 Z
+start_date: 2019-06-21 20:00:00 Z
 link: 'https://www.facebook.com/events/253305305544738/'
 ---
 
@@ -13,6 +13,6 @@ link: 'https://www.facebook.com/events/253305305544738/'
 
 Mach dich gefasst auf die volle Dröhnung Voltage Arc! Wir werden am diesjährigen Jugendfest in Menziken ein ganzes Set spielen.
 
-Um 21:30 Uhr geht's los, im Gemeindesaal, direkt neben dem Primarschulhaus. Ach ja, und Tickets brauchst du keine, der Eintritt ist frei!
+Um 20:30 Uhr geht's los, im Gemeindesaal, direkt neben dem Primarschulhaus. Ach ja, und Tickets brauchst du keine, der Eintritt ist frei!
 
 See you there!!
