@@ -1,7 +1,7 @@
 ---
 title: Jugendfest Menziken
 date: 2019-06-18 04:59:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: Gemeindesaal Menziken
 address: Hauptstrasse 42, 5737 Menziken AG
