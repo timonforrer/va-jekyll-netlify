@@ -9,14 +9,20 @@
       flex-basis: 15rem;
       margin: 0.5em;
     }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
     &--dense {
       & > * {
         flex-basis: 10rem;
       }
     }
+
     &--extended {
       & > * {
-        flex-basis: 20rem;
+        flex-basis: 40rem;
       }
     }
   }
