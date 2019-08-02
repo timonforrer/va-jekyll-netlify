@@ -21,12 +21,19 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          localIdentName: '[local]--[hash:base64:5]'
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Oswald:700', 'IBM Plex Sans:600,400']
+          families: ['Barlow:900', 'IBM Plex Sans:600,400']
         }
       }
     },
