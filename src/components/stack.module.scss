@@ -1,0 +1,11 @@
+.stack  {
+  &--dense > * ~ * {
+    margin-top: .9rem;
+  }
+  &--regular > * ~ * {
+    margin-top: 1.8rem;
+  }
+  &--extended > * ~ * {
+    margin-top: 3.6rem;
+  }
+}
