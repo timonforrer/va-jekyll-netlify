@@ -15,8 +15,8 @@ const Musicians = (props) => {
       <Stack>
         <h2>{title}</h2>
         <Grid dense>
-          {musicians.map(m => (
-            <div>
+          {musicians.map((m, index) => (
+            <div key={index}>
               <img src={m.musician_image.url} alt={m.musician_image.alt} />
               <div className={styles.musicianInfo}>
                 <h3>{m.musician_name}</h3>
