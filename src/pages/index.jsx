@@ -52,6 +52,15 @@ export const query = graphql`
               musician_function
             }
           }
+          ... on PRISMIC_HomeBodyVideo_w__description {
+            type
+            label
+            primary {
+              description
+              title
+              youtube_id
+            }
+          }
         }
       }
     }
