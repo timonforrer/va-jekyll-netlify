@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.icon {
+  & > * {
+    fill: $c_fg_1;
+  }
+  &--dark > * {
+    fill: $c_bg_1;
+  }
+}
