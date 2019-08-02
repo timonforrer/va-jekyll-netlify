@@ -6,6 +6,9 @@ import Layout from '../components/layout'
 import Slice from '../components/slices/slice'
 import SEO from '../components/seo'
 
+import Container from '../components/container'
+import Stack from '../components/stack'
+
 import './index.module.scss'
 
 export const query = graphql`
@@ -63,12 +66,16 @@ export default ({ data }) => {
   return (
   <Layout>
     <SEO title='Home' />
-    <section>
-      {RichText.render(content.hero_title)}
-      {RichText.render(content.hero_introduction)}
-    </section>
+    <Stack extended>
+      <Container tag="section">
+        <Stack tag="aside" dense>
+          {RichText.render(content.hero_title)}
+          {RichText.render(content.hero_introduction)}
+        </Stack>
+      </Container>
 
-    {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
+      {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
+    </Stack>
   </Layout>
   )
 }
