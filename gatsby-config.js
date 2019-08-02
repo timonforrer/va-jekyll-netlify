@@ -11,16 +11,25 @@ module.exports = {
         repositoryName: 'voltagearc', // (required)
         path: '/preview', // (optional, default: /preview)
         previews: true, // (optional, default: false)
-        pages: [{ // (optional)
-          type: 'Post',         // TypeName from prismic
-          match: '/news/:uid',  // Pages will be generated under this pattern (optional)
-          path: '/news',        // Placeholder page for unpublished documents
-          component: require.resolve('./src/templates/post.jsx'),
-        }],
+        // pages: [{ // (optional)
+        //   type: 'Post',         // TypeName from prismic
+        //   match: '/news/:uid',  // Pages will be generated under this pattern (optional)
+        //   path: '/news',        // Placeholder page for unpublished documents
+        //   component: require.resolve('./src/templates/post.jsx'),
+        // }],
       }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Oswald:700', 'IBM Plex Sans:600,400']
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
