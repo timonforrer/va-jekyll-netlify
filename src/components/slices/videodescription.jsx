@@ -1,6 +1,7 @@
 import React from 'react'
 import {RichText} from 'prismic-reactjs'
 
+import Heading from '../heading'
 import Container from '../container'
 import Grid from '../grid'
 import Stack from '../stack'
@@ -12,7 +13,7 @@ const VideoDescription = (props) => {
   return (
     <Container>
       <Stack>
-        <h2>{data.title}</h2>
+        <Heading>{data.title}</Heading>
         <Grid reverse={reverse}>
           {RichText.render(data.description)}
           <Video ytid={data.youtube_id} />

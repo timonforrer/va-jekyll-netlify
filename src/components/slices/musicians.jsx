@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Heading from '../heading'
 import Container from '../container'
 import Grid from '../grid'
 import Stack from '../stack'
@@ -13,7 +14,7 @@ const Musicians = (props) => {
   return (
     <Container>
       <Stack>
-        <h2>{title}</h2>
+        <Heading>{title}</Heading>
         <Grid dense>
           {musicians.map((m, index) => (
             <div key={index}>
