@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.musician {
+  &--info {
+    margin-top: -1.5em;
+    margin-left: -0.8em;
+
+    & > h3 {
+      text-shadow: $s_text;
+    }
+
+    & > p {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
