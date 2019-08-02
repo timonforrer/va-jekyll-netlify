@@ -20,7 +20,7 @@ const Musicians = (props) => {
               <img src={m.musician_image.url} alt={m.musician_image.alt} />
               <div className={styles.musicianInfo}>
                 <h3>{m.musician_name}</h3>
-                <p className="uppercase"><Flash />{m.musician_function}</p>
+                <p className="uppercase"><Flash size={24} />{m.musician_function}</p>
               </div>
             </div>
           ))}
