@@ -132,6 +132,7 @@ strong,
 .lead {
   line-height: $f_lh_lead;
   opacity: 0.8;
-  font-size: $f_s_mobile_h4 + px;
-  font-size: calc(#{$f_s_mobile_lead} * 1px + (#{$f_s_desktop_lead} - #{$f_s_mobile_lead}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
+  font-size: 1.5rem;
+  // font-size: $f_s_mobile_h4 + px;
+  // font-size: calc(#{$f_s_mobile_lead} * 1px + (#{$f_s_desktop_lead} - #{$f_s_mobile_lead}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
