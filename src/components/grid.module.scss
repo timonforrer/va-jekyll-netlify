@@ -1,0 +1,23 @@
+.fukol {
+  &-grid {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+    > * {
+      flex-grow: 1;
+      flex-basis: 15rem;
+      margin: 0.5em;
+    }
+    &--dense {
+      & > * {
+        flex-basis: 10rem;
+      }
+    }
+    &--extended {
+      & > * {
+        flex-basis: 20rem;
+      }
+    }
+  }
+}
