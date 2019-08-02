@@ -42,58 +42,70 @@ h5,
 h6 {
   font-family: $f_f_headline;
   font-weight: $f_w_headline;
-  margin-bottom: 0;
-  text-transform: uppercase;
+  // margin-bottom: 0;
+  // text-transform: uppercase;
+}
+
+h1.display,
+h2.display,
+h3.display {
+  font-size: 4.5rem;
+  line-height: 100%;
 }
 
 h1,
 h2.as-h1,
 h3.as-h1,
 h4.as-h1 {
-  font-size: $f_s_mobile_h1 + px;
-  font-size: calc(#{$f_s_mobile_h1} * 1px + (#{$f_s_desktop_h1} - #{$f_s_mobile_h1}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
+  font-size: 4rem;
+  // font-size: $f_s_mobile_h1 + px;
+  // font-size: calc(#{$f_s_mobile_h1} * 1px + (#{$f_s_desktop_h1} - #{$f_s_mobile_h1}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
 
-h1.has-margin {
-  margin-bottom: 2em;
-}
+// h1.has-margin {
+//   margin-bottom: 2em;
+// }
 
 h2,
 h1.as-h2,
 h3.as-h2,
 h4.as-h2 {
-  font-size: $f_s_mobile_h2 + px;
-  font-size: calc(#{$f_s_mobile_h2} * 1px + (#{$f_s_desktop_h2} - #{$f_s_mobile_h2}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
+  font-size: 3rem;
+  // font-size: $f_s_mobile_h2 + px;
+  // font-size: calc(#{$f_s_mobile_h2} * 1px + (#{$f_s_desktop_h2} - #{$f_s_mobile_h2}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
 
-h2.has-margin {
-  margin-bottom: 1.8em;
-}
+// h2.has-margin {
+//   margin-bottom: 1.8em;
+// }
 
 h3,
 h1.as-h3,
 h2.as-h3,
 h4.as-h3 {
-  font-size: $f_s_mobile_h3 + px;
-  font-size: calc(#{$f_s_mobile_h3} * 1px + (#{$f_s_desktop_h3} - #{$f_s_mobile_h3}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
+  font-size: 2rem;
+  // font-size: $f_s_mobile_h3 + px;
+  // font-size: calc(#{$f_s_mobile_h3} * 1px + (#{$f_s_desktop_h3} - #{$f_s_mobile_h3}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
 
-h3.has-margin {
-  margin-bottom: 1.4em;
-}
+// h3.has-margin {
+//   margin-bottom: 1.4em;
+// }
 
 h4,
 h1.as-h4,
 h2.as-h4,
 h3.as-h4 {
-  font-size: $f_s_mobile_h4 + px;
-  font-size: calc(#{$f_s_mobile_h4} * 1px + (#{$f_s_desktop_h4} - #{$f_s_mobile_h4}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
+  font-size: 2rem;
+  // font-size: $f_s_mobile_h4 + px;
+  // font-size: calc(#{$f_s_mobile_h4} * 1px + (#{$f_s_desktop_h4} - #{$f_s_mobile_h4}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
 
 a,
 p,
 span,
 label {
+  font-size: 1.5rem;
   font-family: $f_f_body;
   font-weight: $f_w_body;
   line-height: $f_lh_body;
@@ -107,6 +119,14 @@ b,
 strong,
 .lead {
   font-weight: $f_w_body_bold;
+}
+
+.uppercase {
+  font-family: $f_f_body;
+  font-size: 1rem;
+  letter-spacing: .3rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
 }
 
 .lead {
