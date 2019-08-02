@@ -8,8 +8,9 @@ import SEO from '../components/seo'
 
 import Container from '../components/container'
 import Stack from '../components/stack'
+import Picture from '../components/picture'
 
-import './index.module.scss'
+import styles from './index.module.scss'
 
 export const query = graphql`
   {
@@ -66,13 +67,16 @@ export default ({ data }) => {
   return (
   <Layout>
     <SEO title='Home' />
-    <Stack extended>
-      <Container tag="section">
-        <Stack tag="aside" dense>
-          {RichText.render(content.hero_title)}
-          {RichText.render(content.hero_introduction)}
-        </Stack>
-      </Container>
+    <Stack className={styles.main} extended>
+      <section className={styles.heroSection}>
+        <Container className={styles.heroSectionText}>
+          <Stack dense>
+            {RichText.render(content.hero_title)}
+            <p className="lead">{RichText.asText(content.hero_introduction)}</p>
+          </Stack>
+        </Container>
+        <Picture className="pin" {...content.hero_image} />
+      </section>
 
       {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
     </Stack>
