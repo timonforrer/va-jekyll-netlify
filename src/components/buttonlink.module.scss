@@ -1,0 +1,30 @@
+@import "../styles/variables";
+
+.buttonlink {
+  align-items: center;
+  background-color: $c_fg_1;
+  color: $c_bg_1;
+  display: inline-flex;
+  font-size: 0.8rem;
+  line-height: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-decoration: none;
+  transition-property: color, background-color;
+  transition: 300ms ease;
+
+  &:hover {
+    background-color: $c_bg_1;
+    color: $c_fg_1;
+    & > svg > * {
+      fill: $c_fg_1;
+    }
+  }
+
+  & > svg {
+    margin-left: 0.75rem;
+    & > * {
+      transition: fill 300ms ease;
+    }
+  }
+}
