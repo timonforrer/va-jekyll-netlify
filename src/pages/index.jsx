@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Slice from '../components/slices/slice'
 import SEO from '../components/seo'
 
+import ButtonLink from '../components/buttonlink'
 import Container from '../components/container'
 import Stack from '../components/stack'
 import Picture from '../components/picture'
@@ -33,6 +34,16 @@ export const query = graphql`
                   title
                   type
                   cover_photo
+                  spotify_embed
+                  providers {
+                    link {
+                      ... on PRISMIC__ExternalLink {
+                        _linkType
+                        url
+                      }
+                    }
+                    provider_name
+                  }
                   _meta {
                     uid
                   }
@@ -83,6 +94,7 @@ export default ({ data }) => {
             <Stack dense>
               {RichText.render(content.hero_title)}
               <p className="lead">{RichText.asText(content.hero_introduction)}</p>
+              <ButtonLink to="http://about" icon="flash">hallo</ButtonLink>
             </Stack>
           </Container>
         </div>
