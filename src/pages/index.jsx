@@ -78,13 +78,15 @@ export default ({ data }) => {
     <SEO title='Home' />
     <Stack className={styles.main} extended>
       <section className={styles.heroSection}>
-        <Container className={styles.heroSectionText}>
-          <Stack dense>
-            {RichText.render(content.hero_title)}
-            <p className="lead">{RichText.asText(content.hero_introduction)}</p>
-          </Stack>
-        </Container>
-        <Picture className="pin" {...content.hero_image} />
+        <div className="pin">
+          <Container className={styles.heroSectionText}>
+            <Stack dense>
+              {RichText.render(content.hero_title)}
+              <p className="lead">{RichText.asText(content.hero_introduction)}</p>
+            </Stack>
+          </Container>
+        </div>
+        <Picture {...content.hero_image} className={styles.heroSection__image} />
       </section>
 
       {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}

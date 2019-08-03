@@ -4,6 +4,8 @@
   &--info {
     margin-top: -1.5em;
     margin-left: -0.8em;
+    position: relative;
+    z-index: 1;
 
     & > h3 {
       text-shadow: $s_text;
