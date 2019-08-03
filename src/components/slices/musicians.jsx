@@ -20,7 +20,6 @@ const Musicians = (props) => {
         <Grid dense>
           {musicians.map((m, index) => (
             <div key={index}>
-              {/* <img src={m.musician_image.url} alt={m.musician_image.alt} /> */}
               <Picture {...m.musician_image} />
               <div className={styles.musicianInfo}>
                 <h3>{m.musician_name}</h3>
