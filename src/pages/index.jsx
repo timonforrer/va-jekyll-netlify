@@ -1,11 +1,12 @@
 import React from 'react'
-// import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 
-import Layout from '../components/layout'
+// import Layout from '../components/layout'
 import Slice from '../components/slices/slice'
-import SEO from '../components/seo'
+// import SEO from '../components/seo'
 
+import ButtonClick from '../components/buttonclick'
 import ButtonLink from '../components/buttonlink'
 import Container from '../components/container'
 import Stack from '../components/stack'
@@ -78,15 +79,9 @@ export const query = graphql`
   }
 `
 
-export default ({ data }) => {
-  const content = data.prismic.home
-  // const main = data.prismic.allHomes.edges.slice(0,1).pop()
-  // const posts = data.prismic.allPosts.edges
-  if (!content) return null
-
+const Homepage = props => {
+  const content = props.data.prismic.home
   return (
-  <Layout>
-    <SEO title='Home' />
     <Stack className={styles.main} extended>
       <section className={styles.heroSection}>
         <div className="pin">
@@ -95,6 +90,7 @@ export default ({ data }) => {
               {RichText.render(content.hero_title)}
               <p className="lead">{RichText.asText(content.hero_introduction)}</p>
               <ButtonLink to="http://about" icon="flash">hallo</ButtonLink>
+              <ButtonClick />
             </Stack>
           </Container>
         </div>
@@ -103,6 +99,7 @@ export default ({ data }) => {
 
       {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
     </Stack>
-  </Layout>
   )
 }
+
+export default Homepage

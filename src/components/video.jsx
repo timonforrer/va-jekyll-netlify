@@ -13,7 +13,7 @@ class Video extends React.Component {
   showIframe = () => this.setState({ show: true })
   hideIframe = () => this.setState({ show: false })
 
-  render () {
+  render() {
     return (
       <div className={styles.video}>
         <div
@@ -21,7 +21,7 @@ class Video extends React.Component {
           style={{ backgroundImage: `url(https://img.youtube.com/vi/${this.props.ytid}/maxresdefault.jpg)` }}
           onClick={(e) => this.showIframe()}
           >
-              {this.state.show && (
+              {this.state.show &&
                 <iframe
                   title={this.props.ytid}
                   width="560"
@@ -36,7 +36,7 @@ class Video extends React.Component {
                   ].join(' ')}
                 >
                 </iframe>
-              )}
+              }
         </div>
       </div>
     )

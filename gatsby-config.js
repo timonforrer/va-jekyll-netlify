@@ -6,28 +6,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-source-prismic-graphql',
-      options: {
-        repositoryName: 'voltagearc', // (required)
-        path: '/preview', // (optional, default: /preview)
-        previews: true, // (optional, default: false)
-        // pages: [{ // (optional)
-        //   type: 'Post',         // TypeName from prismic
-        //   match: '/news/:uid',  // Pages will be generated under this pattern (optional)
-        //   path: '/news',        // Placeholder page for unpublished documents
-        //   component: require.resolve('./src/templates/post.jsx'),
-        // }],
-      }
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: 'gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: 'voltagearc',
+        defaultLang: 'de-ch',
+        path: '/preview',
+        previews: true
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
