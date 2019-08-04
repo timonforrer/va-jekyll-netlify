@@ -24,6 +24,10 @@
     height: 100%;
     z-index: 1;
 
+    & > div {
+      max-width: 100%;
+    }
+
     & p {
       max-width: 100%;
       width: 28ch;
@@ -34,5 +38,24 @@
 .main {
   & > :nth-child(2) {
     margin-top: -3rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    
+    & > :first-child {
+      position: relative; 
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .main {
+    & > :nth-child(2) {
+      margin-top: 3rem;
+    }
   }
 }
