@@ -90,7 +90,6 @@ const Homepage = props => {
               {RichText.render(content.hero_title)}
               <p className="lead">{RichText.asText(content.hero_introduction)}</p>
               <ButtonLink to="http://about" icon="flash">hallo</ButtonLink>
-              <ButtonClick />
             </Stack>
           </Container>
         </div>
