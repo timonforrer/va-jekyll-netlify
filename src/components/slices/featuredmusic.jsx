@@ -1,10 +1,11 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
+import Image from 'gatsby-image'
 
 import ButtonLink from '../buttonlink'
 import Container from '../container'
 import Heading from '../heading'
-import Picture from '../picture'
+// import Picture from '../picture'
 import Stack from '../stack'
 
 import styles from './featuredmusic.module.scss'
@@ -22,7 +23,8 @@ const FeaturedMusic = (props) => {
           <div>
             <div className={styles.grid}>
               <div>
-                <Picture {...data.cover_photo} />
+                <Image fluid={data.cover_photoSharp.childImageSharp.fluid} />
+                {/* <Picture {...data.cover_photo} /> */}
               </div>
               <div dangerouslySetInnerHTML={{ __html: data.spotify_embed.html }} />
             </div>

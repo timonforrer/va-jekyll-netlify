@@ -1,16 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
+import Image from 'gatsby-image'
 
 // import Layout from '../components/layout'
 import Slice from '../components/slices/slice'
 // import SEO from '../components/seo'
 
-import ButtonClick from '../components/buttonclick'
 import ButtonLink from '../components/buttonlink'
 import Container from '../components/container'
 import Stack from '../components/stack'
-import Picture from '../components/picture'
+// import Picture from '../components/picture'
 
 import styles from './index.module.scss'
 
@@ -24,6 +24,13 @@ export const query = graphql`
           _linkType
         }
         hero_image
+        hero_imageSharp {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         body {
           ... on PRISMIC_HomeBodyFeatured_music {
             type
@@ -35,6 +42,13 @@ export const query = graphql`
                   title
                   type
                   cover_photo
+                  cover_photoSharp {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                   spotify_embed
                   providers {
                     link {
@@ -60,6 +74,13 @@ export const query = graphql`
             }
             fields {
               musician_image
+              musician_imageSharp {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               musician_name
               musician_function
             }
@@ -93,7 +114,8 @@ const Homepage = props => {
             </Stack>
           </Container>
         </div>
-        <Picture {...content.hero_image} className={styles.heroSection__image} />
+        <Image fluid={content.hero_imageSharp.childImageSharp.fluid} />
+        {/* <Picture {...content.hero_image} className={styles.heroSection__image} /> */}
       </section>
 
       {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}

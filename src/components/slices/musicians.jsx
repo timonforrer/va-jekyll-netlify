@@ -1,6 +1,7 @@
 import React from 'react'
+import Image from 'gatsby-image'
 
-import Picture from '../picture'
+// import Picture from '../picture'
 import Heading from '../heading'
 import Container from '../container'
 import Grid from '../grid'
@@ -20,7 +21,8 @@ const Musicians = (props) => {
         <Grid dense>
           {musicians.map((m, index) => (
             <div key={index}>
-              <Picture {...m.musician_image} />
+              {/* <Picture {...m.musician_image} /> */}
+              <Image fluid={m.musician_imageSharp.childImageSharp.fluid} />
               <div className={styles.musicianInfo}>
                 <h3>{m.musician_name}</h3>
                 <p className="uppercase"><Flash size={24} />{m.musician_function}</p>
