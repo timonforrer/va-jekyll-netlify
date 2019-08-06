@@ -13,7 +13,7 @@ class ButtonLink extends React.Component {
   render () {
     const props = this.props
     const Icon = this.components[this.props.icon || 'flash']
-    const external = props.to.startsWith('http://') || props.to.startsWith('https://')
+    const external = (props.to && props.to.startsWith('http://')) || (props.to && props.to.startsWith('https://'))
     const Tag = external ? 'a' : Link
 
     return (
