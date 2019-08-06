@@ -1,0 +1,23 @@
+.video-section {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  
+  &__content {
+    z-index: 1;
+  }
+
+  &__modal {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    align-items: center;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+  }
+}

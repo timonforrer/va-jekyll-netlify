@@ -94,6 +94,21 @@ export const query = graphql`
               youtube_id
             }
           }
+          ... on PRISMIC_HomeBodyLarge_video {
+            type
+            primary {
+              title
+              embed
+              background_image
+              background_imageSharp {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
