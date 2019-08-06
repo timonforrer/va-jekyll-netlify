@@ -9,6 +9,7 @@ const Container = (props) => {
       className={[
         styles.container,
         props.dense ? styles.containerDense : '',
+        props.centered ? styles.containerCentered : '',
         props.className ? props.className : ''
       ].join(' ')}
     >
