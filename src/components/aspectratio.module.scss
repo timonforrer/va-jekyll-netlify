@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+
+  & > * {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  & iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
