@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Voltage Arc`,
@@ -20,6 +23,14 @@ module.exports = {
         path: '/preview',
         previews: true
       }
+    },
+    {
+      resolve: `gatsby-source-youtube-v2`,
+      options: {
+        channelId: ['UCdARchfQvlOBcMNZynTPRCg'],
+        apiKey: process.env.YOUTUBE_API_KEY,
+        maxVideos: 50
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
