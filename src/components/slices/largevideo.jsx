@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'gatsby-image'
 
 import styles from './largevideo.module.scss'
+import buttonStyles from '../buttonlink.module.scss'
 
 import AspectRatio from '../aspectratio'
 import Container from '../container'
@@ -45,7 +46,15 @@ class LargeVideo extends React.Component {
             <h2 className="as-h1">
               {content.title}
             </h2>
-            <button onClick={(e) => this.showIframe()}>Video Abspielen</button>
+            <button
+              className={[
+                buttonStyles.buttonlink,
+                'uppercase'
+                ].join(' ')}
+              onClick={(e) => this.showIframe()}
+            >
+                  Video Abspielen
+            </button>
           </Stack>
         </Container>
 
@@ -53,6 +62,7 @@ class LargeVideo extends React.Component {
         <Image
           className="pin"
           fluid={image}
+          style={{position: 'absolute'}}
           alt={content.background_image.alt}
         />
       </section>
