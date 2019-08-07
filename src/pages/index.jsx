@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 import Image from 'gatsby-image'
 
-// import Layout from '../components/layout'
+import Layout from '../components/layout'
 import Slice from '../components/slices/slice'
 // import SEO from '../components/seo'
 
@@ -118,23 +118,25 @@ export const query = graphql`
 const Homepage = props => {
   const content = props.data.prismic.home
   return (
-    <Stack className={styles.main} extended>
-      <section className={styles.heroSection}>
-        <div className="pin">
-          <Container className={styles.heroSectionText}>
-            <Stack dense>
-              {RichText.render(content.hero_title)}
-              <p className="lead">{RichText.asText(content.hero_introduction)}</p>
-              <ButtonLink to="http://about" icon="flash">hallo</ButtonLink>
-            </Stack>
-          </Container>
-        </div>
-        <Image fluid={content.hero_imageSharp.childImageSharp.fluid} />
-        {/* <Picture {...content.hero_image} className={styles.heroSection__image} /> */}
-      </section>
+    <Layout>
+      <Stack className={styles.main} extended>
+        <section className={styles.heroSection}>
+          <div className="pin">
+            <Container className={styles.heroSectionText}>
+              <Stack dense>
+                {RichText.render(content.hero_title)}
+                <p className="lead">{RichText.asText(content.hero_introduction)}</p>
+                <ButtonLink to="/videos" icon="flash">Zu den videos</ButtonLink>
+              </Stack>
+            </Container>
+          </div>
+          <Image fluid={content.hero_imageSharp.childImageSharp.fluid} />
+          {/* <Picture {...content.hero_image} className={styles.heroSection__image} /> */}
+        </section>
 
-      {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
-    </Stack>
+        {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
+      </Stack>
+    </Layout>
   )
 }
 
