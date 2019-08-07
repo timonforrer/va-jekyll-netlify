@@ -6,8 +6,8 @@ import Header from "./header"
 
 import '../styles/global.scss'
 
-const Layout = ({ children }) => (
-  <main>{children}</main>
+const Layout = (props) => (
+  <main className={props.className}>{props.children}</main>
 )
 
 Layout.propTypes = {
