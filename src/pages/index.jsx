@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 import Image from 'gatsby-image'
 
@@ -112,11 +112,21 @@ export const query = graphql`
         }
       }
     }
+    gigs: allAirtable(filter: {table: {eq: "Gigs"}, data: {State: {eq: "fixed"}}}) {
+      edges {
+        node {
+          data {
+            slug: Slug
+          }
+        }
+      }
+    }
   }
 `
 
 const Homepage = props => {
   const content = props.data.prismic.home
+  const gigs = props.data.gigs.edges
   return (
     <Layout>
       <Stack className={styles.main} extended>
@@ -136,6 +146,12 @@ const Homepage = props => {
 
         {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
       </Stack>
+      <ul>
+      {gigs.map(item => {
+        const gig = item.node.data
+        return <li key={gig.slug}><Link to={`/${gig.slug}`}>{gig.slug}</Link></li>
+      })}
+      </ul>
     </Layout>
   )
 }

@@ -25,6 +25,26 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `keyTiycvkXZLfi2WO`, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `appCQEn8NaoT0PdTa`,
+            tableName: `Gigs`,
+            tableView: `Grid view`, // optional
+            queryName: `gigs`, // optional
+            tableLinks: [`Venue`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
+          },
+          {
+            baseId: `appCQEn8NaoT0PdTa`,
+            tableName: `Venues`,
+            tableView: `Grid view`,
+          },
+        ]
+      }
+    },
+    {
       resolve: `gatsby-source-youtube-v2`,
       options: {
         channelId: ['UCdARchfQvlOBcMNZynTPRCg'],
