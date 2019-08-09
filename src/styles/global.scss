@@ -86,8 +86,11 @@ h3.as-h4 {
 a,
 p,
 span,
-label {
+label,
+li,
+button {
   font-size: 1.5rem;
+  font-size: calc(.5vw + 1rem);
   font-family: $f_f_body;
   font-weight: $f_w_body;
   line-height: $f_lh_body;

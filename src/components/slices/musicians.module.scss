@@ -2,7 +2,8 @@
 
 .musician {
   &--info {
-    margin-top: -2.5rem;
+    margin-top: -2.5em;
+    margin-top: calc(-1 * (2vw + 0.75rem));
     margin-left: -1.25rem;
     position: relative;
     z-index: 1;
