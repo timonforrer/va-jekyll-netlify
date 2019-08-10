@@ -51,7 +51,7 @@ export default (props) => (
                     <>
                     {
                       content.iso_start >= today ?
-                      <ShowPreview  key={`show-${index}`} {...content} /> :
+                      <ShowPreview key={`show-${index}`} {...content} /> :
                       null
                     }
                     </>
