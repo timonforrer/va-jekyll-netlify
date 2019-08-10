@@ -109,6 +109,12 @@ export const query = graphql`
               }
             }
           }
+          ... on PRISMIC_HomeBodyUpcoming_shows {
+            type
+            primary {
+              title
+            }
+          }
         }
       }
     }
@@ -146,12 +152,6 @@ const Homepage = props => {
 
         {content.body.map((item, index) => <Slice {...item} key={`slice-${index}`} />)}
       </Stack>
-      <ul>
-      {gigs.map(item => {
-        const gig = item.node.data
-        return <li key={gig.slug}><Link to={`/${gig.slug}`}>{gig.slug}</Link></li>
-      })}
-      </ul>
     </Layout>
   )
 }
