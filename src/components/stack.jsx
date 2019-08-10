@@ -6,6 +6,7 @@ const Stack = (props) => {
   const Tag = props.tag || 'div'
   return (
     <Tag className={[
+        props.denser ? styles.stackDenser : 
         props.dense ? styles.stackDense : 
         props.extended ? styles.stackExtended : 
         styles.stackRegular,
