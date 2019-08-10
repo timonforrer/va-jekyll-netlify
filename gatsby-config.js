@@ -34,7 +34,7 @@ module.exports = {
             tableName: `Gigs`,
             tableView: `Grid view`, // optional
             queryName: `gigs`, // optional
-            tableLinks: [`Venue`, `SENSITIVE`, `COLUMN`, `NAMES`] // optional, for deep linking to records across tables.
+            tableLinks: [`Venue`] // optional, for deep linking to records across tables.
           },
           {
             baseId: `appCQEn8NaoT0PdTa`,
