@@ -1,18 +1,20 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 
 import Container from '../container'
 import Heading from '../heading'
-import Stack from '../stack';
+import ShowPreview from '../showpreview'
+import Stack from '../stack'
 
 export default (props) => (
   <StaticQuery
     query={graphql`
       query UpcomingShowsQuery {
-        gigs: allAirtable(filter: {table: {eq: "Gigs"}, data: {State: {eq: "fixed"}}}) {
+        allAirtable(filter: {table: {eq: "Gigs"}, data: {State: {eq: "fixed"}}}) {
           edges {
             node {
               data {
+                iso_start: Start
                 start: Start(formatString: "DD. MMMM. YYYY", locale: "de")
                 name: Name
                 venue: Venue {
@@ -28,25 +30,40 @@ export default (props) => (
         }
       }
     `}
-    render={data => (
-      <Container>
-        <Stack>
-          <Heading>{props.primary.title}</Heading>
-          <Stack dense>
-            {data.gigs.edges.map((item, index) => {
-              const content = item.node.data
-              console.log(content.venue)
-              return (
-                <div key={`show-${index}`}>
-                  <p>{content.start}</p>
-                  <Link to={`/${content.slug}`}><h3>{content.name}</h3></Link>
-                  <p className="uppercase">{content.venue[0].data.name}, {content.venue[0].data.canton}</p>
-                </div>
-              )
-            })}
-          </Stack>
-        </Stack>
-      </Container>
-    )}
+    render={data => {
+      const today = new Date().toISOString()
+
+      const upcoming = (element) => {
+        return element.node.data.iso_start >= today
+      }
+
+      return (
+        <>
+        {
+          data.allAirtable.edges.some(upcoming) ?
+          <Container>
+            <Stack>
+              <Heading>{props.primary.title}</Heading>
+              <Stack dense>
+                {data.allAirtable.edges.map((item, index) => {
+                  const content = item.node.data
+                  return (
+                    <>
+                    {
+                      content.iso_start >= today ?
+                      <ShowPreview  key={`show-${index}`} {...content} /> :
+                      null
+                    }
+                    </>
+                  )
+                })}
+              </Stack>
+            </Stack>
+          </Container> :
+          null
+        }
+        </>
+      )
+    }}
   />
 )

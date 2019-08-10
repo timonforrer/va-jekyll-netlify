@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Image from 'gatsby-image'
 import { RichText } from 'prismic-reactjs'
 import Layout from '../components/layout'
 
@@ -29,10 +30,16 @@ const Gig = ({data}) => {
                       return <Stack key={index}>{RichText.render(section.primary.content)}</Stack>
                     case ('embed'):
                       return (
-                        <div className={styles.fullWidth}>
+                        <div key={index} className={styles.fullWidth}>
                           <AspectRatio>
-                            <div key={index} dangerouslySetInnerHTML={{ __html: section.primary.url.html }} />
+                            <div dangerouslySetInnerHTML={{ __html: section.primary.url.html }} />
                           </AspectRatio>
+                        </div>
+                      )
+                    case ('photo'):
+                      return (
+                        <div key={index}>
+                          <Image alt={section.primary.image.alt} fluid={section.primary.imageSharp.childImageSharp.fluid} />
                         </div>
                       )
                   }
@@ -80,6 +87,19 @@ export const airtableGigQuery = graphql`
                 type
                 primary {
                   content
+                }
+              }
+              ... on PRISMIC_GigBodyPhoto {
+                type
+                primary {
+                  image
+                  imageSharp {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                 }
               }
               ... on PRISMIC_GigBodyEmbed {
