@@ -96,6 +96,28 @@ button {
   line-height: $f_lh_body;
 }
 
+a {
+  color: $c_fg_2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $c_main_4;
+}
+
+p a,
+li > a {
+  background: linear-gradient(180deg,transparent,transparent 66%,$c_main_1 0,$c_main_1);
+  display: inline;
+  transition: opacity 300ms ease;
+}
+
+p a:hover,
+li > a:hover {
+  opacity: 0.8;
+  color: inherit;
+}
+
 .body {
   line-height: $f_lh_body;
 }
