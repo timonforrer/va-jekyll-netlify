@@ -51,10 +51,21 @@ h3.display {
   line-height: 100%;
 }
 
+a[class^="as-h"],
+b[class^="as-h"],
+p[class^="as-h"],
+strong[class^="as-h"] {
+  font-family: $f_f_headline;
+}
+
 h1,
 h2.as-h1,
 h3.as-h1,
-h4.as-h1 {
+h4.as-h1,
+b.as-h1,
+p.as-h1
+span.as-h1,
+strong.as-h1 {
   font-size: $f_s_mobile_h1 + px;
   font-size: calc(#{$f_s_mobile_h1} * 1px + (#{$f_s_desktop_h1} - #{$f_s_mobile_h1}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
@@ -62,7 +73,11 @@ h4.as-h1 {
 h2,
 h1.as-h2,
 h3.as-h2,
-h4.as-h2 {
+h4.as-h2,
+b.as-h2,
+p.as-h2,
+span.as-h2,
+strong.as-h2 {
   font-size: $f_s_mobile_h2 + px;
   font-size: calc(#{$f_s_mobile_h2} * 1px + (#{$f_s_desktop_h2} - #{$f_s_mobile_h2}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
@@ -70,7 +85,11 @@ h4.as-h2 {
 h3,
 h1.as-h3,
 h2.as-h3,
-h4.as-h3 {
+h4.as-h3,
+b.as-h3,
+p.as-h3,
+span.as-h3,
+strong.as-h3 {
   font-size: $f_s_mobile_h3 + px;
   font-size: calc(#{$f_s_mobile_h3} * 1px + (#{$f_s_desktop_h3} - #{$f_s_mobile_h3}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
@@ -78,7 +97,11 @@ h4.as-h3 {
 h4,
 h1.as-h4,
 h2.as-h4,
-h3.as-h4 {
+h3.as-h4
+b.as-h4,
+p.as-h4
+span.as-h4,
+strong.as-h4 {
   font-size: $f_s_mobile_h4 + px;
   font-size: calc(#{$f_s_mobile_h4} * 1px + (#{$f_s_desktop_h4} - #{$f_s_mobile_h4}) * ((100vw - #{$s_min_vw} * 1px) / (#{$s_max_vw} - #{$s_min_vw})));
 }
@@ -106,14 +129,16 @@ a:hover {
 }
 
 p a,
-li > a {
+li > a,
+a.underlined {
   background: linear-gradient(180deg,transparent,transparent 66%,$c_main_1 0,$c_main_1);
   display: inline;
   transition: opacity 300ms ease;
 }
 
 p a:hover,
-li > a:hover {
+li > a:hover,
+a.underlined:hover {
   opacity: 0.8;
   color: inherit;
 }

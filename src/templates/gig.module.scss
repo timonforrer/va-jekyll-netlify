@@ -1,4 +1,26 @@
+@import "../styles/variables";
+
 .full-width {
   width: calc(100% + 3rem);
   margin-left: -1.5rem;
+}
+
+.secondary-info {
+  display: flex;
+
+  & > * + * {
+    margin-left: 1rem;
+  }
+
+  & svg {
+    margin-top: 0.65rem;
+  }
+}
+
+.price-section {
+  background-image: url('../static/images/dollar.svg');
+  background-repeat: no-repeat;
+  background-color: $c_main_2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
