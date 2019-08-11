@@ -43,6 +43,7 @@ const Gig = ({data}) => {
                         </div>
                       )
                   }
+                  return null
                 })
               }
             </Stack>
