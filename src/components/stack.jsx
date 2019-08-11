@@ -10,7 +10,8 @@ const Stack = (props) => {
         props.dense ? styles.stackDense : 
         props.extended ? styles.stackExtended : 
         styles.stackRegular,
-        props.className ? props.className : ''
+        props.className ? props.className : '',
+        styles.stack
       ].join(' ')}
     >
       {props.children}

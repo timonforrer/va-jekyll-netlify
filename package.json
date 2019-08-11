@@ -20,6 +20,7 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^8.24.1",
+    "react-modal": "^3.9.1",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
