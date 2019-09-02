@@ -1,7 +1,7 @@
 ---
 title: For Rock 'n' Roll
 date: 2019-05-26 14:22:00 Z
-state: upcoming
+state: former
 author: Voltage Arc
 location: TaB
 address: Tunaustrasse 5, 5734 Reinach AG
